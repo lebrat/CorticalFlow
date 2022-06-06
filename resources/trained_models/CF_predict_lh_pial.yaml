@@ -1,0 +1,20 @@
+# input configuration
+inputs:
+  # hemisphere sufix [lh or rh]
+  hemisphere: 'lh'
+  # templates used to train the model.
+  template: /scratch2/fon022/CFPP/resources/neurips_templates/lh_pial_template_435k.stl
+
+# set white model to none
+white_model: null
+
+pial_model:
+  # number of feature channels and down/up sampling for each deformation
+  nb_features: [[[16, 32, 32, 32],[32, 32, 32, 32, 32, 16, 16]], [[16, 32],[32, 32, 16, 16]], [[16, 32], [32, 32, 16, 16]]]
+  # Integration method used (NeurIPS, Euler, RK4, null (no integration is performed))
+  integration_method: 'NeurIPS'
+  # integration steps
+  integration_steps: 7  
+  # model weights checkpoint
+  model_checkpoint: /scratch2/fon022/CFPP/resources/trained_models/CF_LEFT_PIAL.pth
+

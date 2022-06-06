@@ -1,0 +1,73 @@
+# pass via CLI to override configurations
+user_config: null
+
+# dataset configuration
+dataset:  
+  # path to dataset directory
+  path: /scratch2/fon022/datasets/SURF_ADNI_AFFINE_DATASET/
+  # split file map
+  split_file: /scratch2/fon022/CFPP/resources/ADNI_SPLIT.csv
+  # training split name
+  train_split_name: train
+  # validation split name
+  val_split_name: val
+  # surface to load (lh_pial, 'lh_white', 'rh_pial', 'rh_white')
+  surface_name: 'lh_white'
+
+# trainer configuration
+trainer:
+  # number of images per batch
+  img_batch_size: 3
+  # number of point per image
+  points_per_image: 150000
+  # log interval in iterations 
+  train_log_interval:  10
+  # frequency of iterations to checkpoint model
+  checkpoint_interval: 10000
+  # frequency of iterations to evaluate model
+  evaluate_interval: 5000  
+  # train device: ex: cuda:0
+  device: 'cuda:0'
+  # resume from training checkpoint (null will train from scratch)
+  resume: null
+  # debug mode will short some loops
+  debug: False
+ 
+# Model configuration
+model:
+  # number of iterations to train each deformation. Here we have 3 deformation each trained for 60k iterations.  
+  number_of_iterations: [70000, 70000, 70000]
+  # number of feature channels and down/up sampling for each deformation
+  nb_features: [[[16, 32, 32, 32],[32, 32, 32, 32, 32, 16, 16]], [[16, 32],[32, 32, 16, 16]], [[16, 32], [32, 32, 16, 16]]]
+  # templates used to train the model. One per deformation
+  templates: ['/scratch2/fon022/CFPP/resources/smooth_templates/lh_white_smooth_40k.obj', '/scratch2/fon022/CFPP/resources/smooth_templates/lh_white_smooth_140k.obj', '/scratch2/fon022/CFPP/resources/smooth_templates/lh_white_smooth_380k.obj']
+  # Integration method used (NeurIPS, Euler, RK4, SS, null (no integration is performed))
+  integration_method: 'RK4'
+  # integration steps
+  integration_steps: 30
+  # use predicted flow as input for the next deformation
+  share_flows: True
+
+# Optimized objective parameters
+objective:
+  # chamfer loss weight (a list with a value for each deformation)
+  chamffer_weight: [1.0, 1.0, 1.0]
+  # edge loss weight (a list with a value for each deformation)
+  edge_loss_weight: [1.0, 1.0, 1.0]
+
+# optimizer and its arguments
+optimizer:
+  name: Adam
+  lr: [0.0001, 0.0001, 0.0001]  
+
+# output configuration (ATTENTION it MUST be override from command line to work with hydra log files)
+outputs:
+  # output directory
+  output_dir: /scratch2/fon022/CFPP/checkpoints/DEBUG/
+
+# hydra configurations and log files (Do not override)
+hydra:
+  run:
+    dir: ${outputs.output_dir}
+  output_subdir: null
+

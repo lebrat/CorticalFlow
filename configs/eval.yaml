@@ -1,0 +1,23 @@
+# input text file with like subject_id;gt_mesh_path;pred_mesh_path rows
+in_file: /flush5/fon022/NeuroI_DL_Surf/checkpoints/debug/EVAL_FILE_SAMPLE.csv
+
+# index to start processing
+start_idx: 0
+
+# index to finish processing (-1 means the end of the in_files)
+end_idx: -1
+
+# evaluation batch size
+batch_size: 4
+
+# number of sampled points to run evaluation
+num_sampled_points: 200000
+
+# output directory to save the evaluation metrics
+out_dir: /flush5/fon022/NeuroI_DL_Surf/checkpoints/debug/results/
+
+# hydra configurations and log files
+hydra:
+  run:
+    dir: ${out_dir}
+  output_subdir: null

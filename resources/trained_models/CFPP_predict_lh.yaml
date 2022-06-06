@@ -1,0 +1,6 @@
+# input configuration
+inputs:
+  # hemisphere sufix [lh or rh]
+  hemisphere: 'lh'
+  # templates used to train the model.
+  template: /scratch2/fon022/CFPP/resources/smooth_templates/lh_white_smooth_380k.obj

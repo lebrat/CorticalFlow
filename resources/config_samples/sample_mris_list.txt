@@ -1,0 +1,12 @@
+941_S_1202_m06	/scratch2/fon022/datasets/SURF_ADNI_AFFINE_DATASET/941_S_1202_m06/mri.nii.gz
+941_S_1202_m12	/scratch2/fon022/datasets/SURF_ADNI_AFFINE_DATASET/941_S_1202_m12/mri.nii.gz
+941_S_1202_m24	/scratch2/fon022/datasets/SURF_ADNI_AFFINE_DATASET/941_S_1202_m24/mri.nii.gz
+941_S_1202_m36	/scratch2/fon022/datasets/SURF_ADNI_AFFINE_DATASET/941_S_1202_m36/mri.nii.gz
+941_S_1203_bl	/scratch2/fon022/datasets/SURF_ADNI_AFFINE_DATASET/941_S_1203_bl/mri.nii.gz
+941_S_1295_bl	/scratch2/fon022/datasets/SURF_ADNI_AFFINE_DATASET/941_S_1295_bl/mri.nii.gz
+941_S_1311_bl	/scratch2/fon022/datasets/SURF_ADNI_AFFINE_DATASET/941_S_1311_bl/mri.nii.gz
+941_S_1311_m06	/scratch2/fon022/datasets/SURF_ADNI_AFFINE_DATASET/941_S_1311_m06/mri.nii.gz
+941_S_1311_m12	/scratch2/fon022/datasets/SURF_ADNI_AFFINE_DATASET/941_S_1311_m12/mri.nii.gz
+941_S_1311_m18	/scratch2/fon022/datasets/SURF_ADNI_AFFINE_DATASET/941_S_1311_m18/mri.nii.gz
+941_S_1311_m24	/scratch2/fon022/datasets/SURF_ADNI_AFFINE_DATASET/941_S_1311_m24/mri.nii.gz
+941_S_1363_bl	/scratch2/fon022/datasets/SURF_ADNI_AFFINE_DATASET/941_S_1363_bl/mri.nii.gz

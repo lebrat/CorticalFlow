@@ -1,0 +1,10 @@
+# dataset configuration
+dataset:  
+  # surface to load (lh_pial, 'lh_white', 'rh_pial', 'rh_white')
+  surface_name: 'rh_white'
+ 
+# Model configuration
+model:
+  # templates used to train the model. One per deformation
+  templates: ['/scratch2/fon022/CFPP/resources/smooth_templates/rh_white_smooth_40k.obj', '/scratch2/fon022/CFPP/resources/smooth_templates/rh_white_smooth_140k.obj', '/scratch2/fon022/CFPP/resources/smooth_templates/rh_white_smooth_380k.obj']
+

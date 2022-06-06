@@ -1,0 +1,18 @@
+# input configuration
+inputs:
+  # hemisphere sufix [lh or rh]
+  hemisphere: 'rh'
+  # templates used to train the model.
+  template: /scratch2/fon022/CFPP/resources/neurips_templates/rh_white_template_450k.obj
+
+# Cortical model configuration
+white_model:
+  # Integration method used (NeurIPS, Euler, RK4, null (no integration is performed))
+  integration_method: 'NeurIPS'
+  # integration steps
+  integration_steps: 7
+  # model weights checkpoint
+  model_checkpoint: /scratch2/fon022/CFPP/resources/trained_models/CF_RIGHT_WHITE.pth
+
+# Set to null if do not want to predict the pial surface
+pial_model: null

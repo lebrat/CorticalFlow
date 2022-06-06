@@ -1,0 +1,60 @@
+# pass via CLI to override configurations
+user_config: null
+
+# input configuration
+inputs:
+  # type of input ['list', 'file', 'formatted']
+  data_type: formatted
+  # formatted dataset path, path to a text file or path to a mri
+  path: /scratch2/fon022/datasets/SURF_ADNI_AFFINE_DATASET/
+  # unique id for the input mri or a split
+  split_name: test
+  # split map
+  split_file: /scratch2/fon022/CFPP/resources/ADNI_SPLIT.csv
+  # hemisphere sufix [lh or rh]
+  hemisphere: 'lh'
+  # ex: cuda:0
+  device: 'cuda:0'
+  # templates used to train the model.
+  template: /scratch2/fon022/CFPP/resources/smooth_templates/lh_white_smooth_380k.obj
+
+# Cortical model configuration
+white_model:
+  # number of feature channels and down/up sampling for each deformation
+  nb_features: [[[16, 32, 32, 32],[32, 32, 32, 32, 32, 16, 16]], [[16, 32],[32, 32, 16, 16]], [[16, 32], [32, 32, 16, 16]]]
+  # Integration method used (NeurIPS, Euler, RK4, null (no integration is performed))
+  integration_method: 'RK4'
+  # integration steps
+  integration_steps: 30
+  # use predicted flow as input for the next deformation
+  share_flows: True
+  # model weights checkpoint
+  model_checkpoint: /scratch2/fon022/CFPP/resources/trained_models/CFPP_LEFT_WHITE.pth
+
+# Set to null if do not want to predict the pial surface
+pial_model:
+  # number of feature channels and down/up sampling for each deformation
+  nb_features: [[[16, 32],[32, 32, 16, 16]], [[16, 32],[32, 32, 16, 16]], [[16, 32], [32, 32, 16, 16]]]    
+  # Integration method used (NeurIPS, Euler, RK4, SS, null (no integration is performed))
+  integration_method: 'RK4'
+  # integration steps
+  integration_steps: 30
+  # use predicted flow as input for the next deformation
+  share_flows: True
+  # model weights checkpoint
+  model_checkpoint: /scratch2/fon022/CFPP/resources/trained_models/CFPP_LEFT_PIAL.pth
+  
+# output configuration (ATTENTION it MUST be override from command line to work with hydra log files)
+outputs:  
+  # output directory
+  output_dir: /scratch2/fon022/CFPP/checkpoints/predict_debug/  
+  # save predictions after which deformations
+  out_deform: [0, 1, 2]
+  # output mesh format to use [stl, freesurfer, or npz]
+  out_format: freesurfer  
+
+# hydra configurations and log files
+hydra:
+  run:
+    dir: ${outputs.output_dir}
+  output_subdir: null

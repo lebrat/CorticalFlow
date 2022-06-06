@@ -1,0 +1,17 @@
+# input configuration
+inputs:
+  # hemisphere sufix [lh or rh]
+  hemisphere: 'rh'
+  # templates used to train the model.
+  template: /scratch2/fon022/CFPP/resources/smooth_templates/rh_white_smooth_380k.obj
+
+# Cortical model configuration
+white_model:
+  # model weights checkpoint
+  model_checkpoint: /scratch2/fon022/CFPP/resources/trained_models/CFPP_RIGHT_WHITE.pth
+
+# Set to NONE if do not want to predict the pial surface
+pial_model:
+  # model weights checkpoint
+  model_checkpoint: /scratch2/fon022/CFPP/resources/trained_models/CFPP_RIGHT_PIAL.pth
+  

@@ -1,0 +1,20 @@
+CSIRO:
+  name             : "The Commonwealth Scientific and Industrial Research Organisation (CSIRO)"
+  avatar           : "/assets/images/CSIRO_Logo.png" 
+  home             : https://www.csiro.au
+
+QUT:
+  name             : "Queensland University of Technology (QUT)"
+  avatar           : "/assets/images/QUT_Logo.png" 
+  home             : https://www.qut.edu.au/
+
+
+UQ:
+  name             : "University of Queensland (UQ)"
+  avatar           : "/assets/images/uq.jpg" 
+  home             : https://www.uq.edu.au/
+
+IMT:
+  name             : "Mathematic Institute of Toulouse"
+  avatar           : "/assets/images/imt.jpg"
+  home             : https://www.math.univ-toulouse.fr/?lang=en

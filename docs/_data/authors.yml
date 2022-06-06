@@ -1,0 +1,90 @@
+Leo:
+  name             : "Leo Lebrat"
+  avatar           : "/assets/images/bio-leo.jpg" 
+  location         : "CSIRO & QUT"
+  links:
+    - label: "Email"
+      icon: "fas fa-fw fa-envelope-square"
+      url: "mailto:leo.lebrat@csiro.au"
+    - label: "Website"
+      icon: "fas fa-fw fa-link"
+      url: "https://lebrat.org"
+
+Rodrigo:
+  name             : "Rodrigo Santa Cruz"
+  avatar           : "/assets/images/bio-rodrigo.jpg" 
+  location         : "CSIRO & QUT"
+  links:
+    - label: "Email"
+      icon: "fas fa-fw fa-envelope-square"
+      url: "mailto:rodrigo.santacruz@csiro.au"
+    - label: "Website"
+      icon: "fas fa-fw fa-link"
+      url: "https://rfsantacruz.com"
+
+Frederic:
+  name             : "Frederic de Gournay"
+  avatar           : "/assets/images/bio-fred.jpg" 
+  location         : "IMT"
+  links:
+    - label: "Email"
+      icon: "fas fa-fw fa-envelope-square"
+      url: "mailto:Frederic.De.Gournay@math.univ-toulouse.fr"
+
+Darren:
+  name             : "Darren Fu"
+  avatar           : "/assets/images/bio-darren.jpg" 
+  location         : "UQ"
+  links:
+    - label: "Email"
+      icon: "fas fa-fw fa-envelope-square"
+      url: "mailto:"
+
+
+Clinton:
+  name             : "Clinton Fookes"
+  avatar           : "/assets/images/bio-clinton.jpg"
+  location         : "QUT"
+  links:
+    - label: "Email"
+      icon: "fas fa-fw fa-envelope-square"
+      url: "mailto:c.fookes@qut.edu.au"
+    - label: "Website"
+      icon: "fas fa-fw fa-link"
+      url: "https://staff.qut.edu.au/staff/c.fookes"    
+
+Olivier:
+  name             : "Olivier Salvado"
+  avatar           : "/assets/images/bio-olivier.jpg"
+  location         : "CSIRO"
+  links:
+    - label: "Email"
+      icon: "fas fa-fw fa-envelope-square"
+      url: "mailto:olivier.salvado@csiro.au"
+    - label: "Website"
+      icon: "fas fa-fw fa-link"
+      url: "https://people.csiro.au/S/O/Olivier-Salvado"  
+
+Pierrick:
+  name             : "Pierrick Bourgeat"
+  avatar           : "/assets/images/bio-pi.jpg"
+  location         : "CSIRO"
+  links:
+    - label: "Email"
+      icon: "fas fa-fw fa-envelope-square"
+      url: "mailto:pierrick.bourgeat@csiro.au"
+    - label: "Website"
+      icon: "fas fa-fw fa-link"
+      url: "https://people.csiro.au/b/p/pierrick-bourgeat"
+
+Jurgen:
+  name             : "Jurgen Fripp"
+  avatar           : "/assets/images/bio-jurgen.jpg"
+  location         : "CSIRO"
+  links:
+    - label: "Email"
+      icon: "fas fa-fw fa-envelope-square"
+      url: "mailto:jurgen.fripp@csiro.au"
+    - label: "Website"
+      icon: "fas fa-fw fa-link"
+      url: "https://people.csiro.au/F/J/Jurgen-Fripp"

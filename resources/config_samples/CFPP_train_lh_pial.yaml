@@ -1,0 +1,4 @@
+# dataset configuration
+dataset:  
+  # surface to load (lh_pial, rh_pial)
+  surface_name: lh_pial

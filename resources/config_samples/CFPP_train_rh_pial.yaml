@@ -1,0 +1,11 @@
+# dataset configuration
+dataset:  
+  # surface to load (lh_pial, rh_pial)
+  surface_name: rh_pial
+
+# White surface model configuration
+white_model: 
+  # weights of the pretrained white model
+  model_checkpoint: /scratch2/fon022/CFPP/resources/trained_models/CFPP_RIGHT_WHITE.pth
+  # template used to train the model. One per deformation
+  template: /scratch2/fon022/CFPP/resources/smooth_templates/rh_white_smooth_380k.obj  
